@@ -1,4 +1,4 @@
-## Java Generics
+# Java Generics
 
 One useful way of using Generics is like this:
 
@@ -35,9 +35,9 @@ public class Main {
 }
 ```
 
-## Decorators
+# Decorators
 
-# In this example, we will write a program to read a zip file:
+## In this example, we will write a program to read a zip file:
 
 ```java
 public class IOMain {
@@ -69,7 +69,7 @@ public class IOMain {
 }
 ```
 
-# Another example of a decorator:
+## Another example of a decorator:
 
 "MyWriter.java"
 
@@ -111,7 +111,7 @@ public class MyReader {
 }
 ```
 
-## Multi-Dimension Arrays:
+# Multi-Dimension Arrays:
 
 ```java
 public class ArrayMain {
