@@ -38,7 +38,7 @@ public class Main {
 Notice that usually, we would construct a box of strings like this:
 
 ```java
-public class Box { // <- Notice the "<T>"? This essentially makes the type of the box a param
+public class Box {
     private String boxContents;
 
     public String getBoxContents() {
