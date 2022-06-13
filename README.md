@@ -35,6 +35,24 @@ public class Main {
 }
 ```
 
+Notice that usually, we would construct a box of strings like this:
+
+```java
+public class Box { // <- Notice the "<T>"? This essentially makes the type of the box a param
+    private String boxContents;
+
+    public String getBoxContents() {
+        return boxContents;
+    }
+
+    public void setBoxContents(String boxContents) {
+        this.boxContents = boxContents;
+    }
+}
+```
+
+with the use of "generics", we can define the type of the box on-the-go! Pretty cool eh?
+
 # Decorators
 
 ## In this example, we will write a program to read a zip file:
