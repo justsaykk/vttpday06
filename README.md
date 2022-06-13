@@ -64,8 +64,8 @@ public class IOMain {
             InputStream is = new FileInputStream(args[0]);
             ZipInputStream zis = new ZipInputStream(is);
             /* Notice that in previous examples, we only used up to the InputStream.
-            Using an additional layer of ZipInputStream helps us to open up more functionality and gain access to different set of methods
-
+            Using an additional layer of ZipInputStream helps us to open up more
+            functionality and gain access to different set of methods
             This is a concept called "decorating" or "decorators"
             */
 
@@ -95,7 +95,9 @@ public class IOMain {
 public class MyWriter {
     public static void main(String[] args) throws IOException {
         FileOutputStream fos = new FileOutputStream(args[0]);
-        BufferedOutputStream bos = new BufferedOutputStream(fos); // This is what we call a "decorator"
+
+        // This is what we call a "decorator"
+        BufferedOutputStream bos = new BufferedOutputStream(fos);
         ObjectOutputStream oos = new ObjectOutputStream(bos);
 
         oos.writeInt(2);
@@ -116,7 +118,8 @@ public class MyReader {
         BufferedInputStream bis = new BufferedInputStream(fis);
         ObjectInputStream ois = new ObjectInputStream(bis);
 
-        int lines = ois.readInt(); // Since we wrote integer first, we need to read integer first.
+        // Since we wrote integer first, we need to read integer first.
+        int lines = ois.readInt();
         System.out.printf("there are %d int lines\n", lines);
 
         for (int i = 0; i < lines; i++) {
@@ -150,11 +153,9 @@ public class ArrayMain {
             matrix[i][3] = i;
         }
 
-        /*
-        We need to note that in Java, there is no such thing as a 2D array.
-        The way to emulate it is to have an array of arrays.
-        Therefore, it is possible that the array is not NxN. It could be NxM.
-        */
     }
 }
 ```
+
+We need to note that in Java, there is no such thing as a 2D array. The way to emulate it is to have an array of arrays. 
+Therefore, it is possible that the array is not a nice & uniformed NxN. It could be NxM.
